@@ -31,6 +31,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     height: 80px;
+    width: 100%;
 }
 
 .logo{
@@ -168,7 +169,7 @@ nav ul .nav-links {
 }
 
 img.team{
-    width: 100%;
+    width: 90%;
     height: 600px;
 }
 
@@ -216,7 +217,8 @@ img.team{
 
 #contact{
     background-color: var(--primary);
-    height: 800px;
+    height: auto;
+    padding-bottom: 100px;
 }
 
 .contact-content{
@@ -243,7 +245,8 @@ img.team{
 
 #contact form{
     background-color: var(--white);
-    height: 590px;
+    height: auto;
+    padding-bottom: 100px;
     border-radius: 8px;
     padding: 25px;
     color: var(--text-dark);
