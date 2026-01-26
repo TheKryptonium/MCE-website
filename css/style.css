@@ -1,4 +1,4 @@
-:root{
+:root {
     --primary: #162661;
     --secondary: #1F368B;
     --primary-hover: #0f1b46;
@@ -11,19 +11,19 @@
 }
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
 }
 
 
-nav{
+nav {
     background-color: white;
     color: var(--primary);
     display: flex;
@@ -34,13 +34,13 @@ nav{
     width: 100%;
 }
 
-.logo{
+.logo {
     width: 62px;
     height: 60px;
     cursor: pointer;
 }
 
-nav>ul{
+nav>ul {
     display: flex;
     flex-direction: row;
     gap: 12px;
@@ -54,12 +54,12 @@ nav ul .nav-links {
     transition: var(--transition);
 }
 
-.nav-links:hover{
+.nav-links:hover {
     color: var(--text-dark);
     transform: scaleX(2);
 }
 
-.nav-links.nav-button{
+.nav-links.nav-button {
     background-color: var(--primary);
     color: var(--white);
     padding: 10px;
@@ -69,13 +69,13 @@ nav ul .nav-links {
     transition: var(--transition);
 }
 
-.nav-button:hover{
+.nav-button:hover {
     background-color: var(--white);
     color: var(--primary-hover);
     border: var(--primary-hover) 2px solid;
 }
 
-nav .menu{
+nav .menu {
     border: none;
     background: none;
     font-size: 1.5rem;
@@ -83,12 +83,12 @@ nav .menu{
     display: none;
 }
 
-nav .menu:hover{
+nav .menu:hover {
     color: var(--text-dark);
     cursor: pointer;
 }
 
-.hero{
+.hero {
     height: 100vh;
     background: linear-gradient(rgba(22, 38, 97, 0.8), rgba(22, 38, 97, 0.6)), url('../assets/images/team_mce.jpeg');
     background-size: cover;
@@ -99,8 +99,13 @@ nav .menu:hover{
     margin-top: 0;
 }
 
+.hero-content {
+    width: 100%;
+    padding: 0 20px;
+    animation: tracking-in-expand-fwd-bottom 3s 1 both;
+}
 
-.hero .accroche{
+.hero .accroche {
     font-size: 2.2rem;
     color: var(--white);
     margin-bottom: 20px;
@@ -109,7 +114,7 @@ nav .menu:hover{
     text-transform: uppercase;
 }
 
-.hero p{
+.hero p {
     font-size: 1.2rem;
     margin-bottom: 40px;
     max-width: 700px;
@@ -118,25 +123,26 @@ nav .menu:hover{
     color: var(--skyblue);
 }
 
-.btn-devis, .btn-projets{
+.btn-devis,
+.btn-projets {
     text-transform: uppercase;
     padding: 15px;
     font-weight: 700;
 }
 
-.btn-devis{
+.btn-devis {
     background-color: var(--secondary);
     color: var(--white);
     transition: var(--transition);
 }
 
-.btn-devis:hover{
+.btn-devis:hover {
     color: var(--secondary);
     background-color: transparent;
     border: 2px solid var(--secondary);
 }
 
-.btn-projets{
+.btn-projets {
     background-color: transparent;
     color: var(--white);
     border: 2px solid white;
@@ -144,7 +150,7 @@ nav .menu:hover{
     transition: var(--transition);
 }
 
-.btn-projets:hover{
+.btn-projets:hover {
     background-color: var(--white);
     border: none;
     color: var(--primary-hover);
@@ -152,28 +158,30 @@ nav .menu:hover{
 
 
 /* About section */
-#a-propos, #services, #projets{
+#a-propos,
+#services,
+#projets {
     background: var(--gray-bg);
     padding-top: 50px;
 
 }
 
-.section-title{
+.section-title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 20px;
     line-height: 1.2;
     font-weight: 800;
     color: var(--primary);
-}   
+}
 
 
-.row{
+.row {
     justify-content: space-between;
 }
 
 
-.about-content h3{
+.about-content h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
     line-height: 1;
@@ -181,22 +189,28 @@ nav .menu:hover{
     color: var(--primary);
 }
 
-img.team{
+
+img.team {
     width: 90%;
     height: auto;
 }
 
-.values, .services, .choices{
+.values,
+.services,
+.choices {
     justify-content: center;
 }
 
-.valeurs h3, .choisir h3{
+.valeurs h3,
+.choisir h3 {
     text-align: center;
     text-transform: capitalize;
     margin: 10px 0;
 }
 
-.value, .service, .choice{
+.value,
+.service,
+.choice {
     margin: 10px 5px;
     padding: 40px 30px;
     border-radius: 8px;
@@ -205,36 +219,47 @@ img.team{
     border-bottom: 3px solid transparent;
 }
 
-.value:hover, .service:hover, .choice:hover{
+.value:hover,
+.service:hover,
+.choice:hover {
     transform: translateY(-10px);
     border-bottom: 3px solid var(--primary-hover);
 }
 
-.value i, .value h4, .service i, .service h4, .choice i, .choice h4{
+.value i,
+.value h4,
+.service i,
+.service h4,
+.choice i,
+.choice h4 {
     color: var(--primary)
 }
 
-.value i, .service i, .choice i{
+.value i,
+.service i,
+.choice i {
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.value h4, .service h4, .choice h4{
+.value h4,
+.service h4,
+.choice h4 {
     font-weight: 600;
 }
 
-.choice h4{
+.choice h4 {
     font-size: 1rem;
     text-align: center;
 }
 
-#contact{
+#contact {
     background-color: var(--primary);
     height: auto;
     padding-bottom: 100px;
 }
 
-.contact-content{
+.contact-content {
     padding-top: 70px;
     display: flex;
     flex-direction: row;
@@ -242,21 +267,21 @@ img.team{
 
 }
 
-#contact h2{
+#contact h2 {
     font-size: 1.8rem;
     color: var(--white);
 }
 
-#contact .contact-side{
+#contact .contact-side {
     padding-top: 80px;
     color: var(--skyblue);
 }
 
-.form-box{
+.form-box {
     padding-left: 50px;
 }
 
-#contact form{
+#contact form {
     background-color: var(--white);
     height: auto;
     padding-bottom: 100px;
@@ -265,23 +290,24 @@ img.team{
     color: var(--text-dark);
 }
 
-#contact form h3{
+#contact form h3 {
     color: var(--secondary);
     font-weight: 580;
     font-size: 1.25rem;
     margin: 10px 0;
 }
 
-#contact form label{
+#contact form label {
     font-weight: 600;
     font-size: 0.95rem;
 }
 
-#contact form input, #contact form textarea{
+#contact form input,
+#contact form textarea {
     background-color: var(--gray-bg);
 }
 
-#contact form button{
+#contact form button {
     background-color: var(--secondary);
     color: var(--white);
     text-transform: uppercase;
@@ -292,34 +318,34 @@ img.team{
     font-size: 1rem;
 }
 
-.footer{
+.footer {
     background-color: var(--primary-hover);
     color: #ccc;
     padding-top: 50px;
     font-size: 0.95rem;
 }
 
-.resume{
+.resume {
     justify-content: space-between;
 }
 
-.resume h3{
+.resume h3 {
     font-size: 1.15rem;
     color: white;
     font-weight: 600;
     margin-bottom: 25px;
 }
 
-.resume li{
+.resume li {
     margin-bottom: 5px;
 }
 
-.resume a{
+.resume a {
     text-decoration: none;
     color: #ccc;
 }
 
-.copyright{
+.copyright {
     padding: 20px 0;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -327,65 +353,99 @@ img.team{
 
 
 /** Responsive Styles **/
-@media only screen and (max-width: 767px){
-    nav ul{
+@media only screen and (max-width: 767px) {
+    nav ul {
         display: none;
     }
 
-    nav .menu{
+    nav .menu {
         display: block;
     }
 
-    .hero .accroche{
+    .hero .accroche {
         font-size: 1.5rem;
         padding: 0 10px;
     }
 
-    .hero p{
+    .hero p {
         font-size: 1rem;
         padding: 0 10px;
     }
 
-    .btn-devis, .btn-projets{
+    .btn-devis,
+    .btn-projets {
         padding: 10px;
         font-size: 0.9rem;
     }
 
-    .about-content .row, .mission .row, .vision .row{
+    .about-content .row,
+    .mission .row,
+    .vision .row {
         flex-direction: column;
         align-items: center;
     }
 
-    img.team{
+    img.team {
         height: auto;
         width: 100%;
         margin-top: 20px;
     }
 
-    .value, .service, .choice{
+    .value,
+    .service,
+    .choice {
         margin: 10px 0px;
         padding: 40px 30px;
         width: 80%;
     }
 
-    .service li{
+    .service li {
         font-size: 0.9rem;
     }
 
-    .contact-content{
+    .contact-content {
         flex-direction: column;
         justify-content: center;
     }
 
-    .form-box{
+    .form-box {
         padding-left: 0;
         margin-top: 30px;
     }
 }
 
 
-@media only screen and (max-width: 576px){
-    .btn-devis, .btn-projets{
+@media only screen and (max-width: 576px) {
+
+    .btn-devis,
+    .btn-projets {
         margin: 5px 0;
     }
 }
+
+
+/*Animations*/
+/* ----------------------------------------------
+ * Generated by Animista on 2026-1-26 13:22:8
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand-fwd-bottom
+ * ----------------------------------------
+ */
+@keyframes tracking-in-expand-fwd-bottom {
+    0% {
+        transform: translateZ(-700px) translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
+}
+
