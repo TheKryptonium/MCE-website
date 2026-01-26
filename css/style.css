@@ -75,6 +75,19 @@ nav ul .nav-links {
     border: var(--primary-hover) 2px solid;
 }
 
+nav .menu{
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    color: var(--primary);
+    display: none;
+}
+
+nav .menu:hover{
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
 .hero{
     height: 100vh;
     background: linear-gradient(rgba(22, 38, 97, 0.8), rgba(22, 38, 97, 0.6)), url('../assets/images/team_mce.jpeg');
@@ -170,14 +183,14 @@ nav ul .nav-links {
 
 img.team{
     width: 90%;
-    height: 600px;
+    height: auto;
 }
 
 .values, .services, .choices{
     justify-content: center;
 }
 
-.valeurs h3, .choices h3, .choisir h3{
+.valeurs h3, .choisir h3{
     text-align: center;
     text-transform: capitalize;
     margin: 10px 0;
@@ -313,4 +326,66 @@ img.team{
 }
 
 
+/** Responsive Styles **/
+@media only screen and (max-width: 767px){
+    nav ul{
+        display: none;
+    }
 
+    nav .menu{
+        display: block;
+    }
+
+    .hero .accroche{
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+
+    .hero p{
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .btn-devis, .btn-projets{
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .about-content .row, .mission .row, .vision .row{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img.team{
+        height: auto;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .value, .service, .choice{
+        margin: 10px 0px;
+        padding: 40px 30px;
+        width: 80%;
+    }
+
+    .service li{
+        font-size: 0.9rem;
+    }
+
+    .contact-content{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .form-box{
+        padding-left: 0;
+        margin-top: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 576px){
+    .btn-devis, .btn-projets{
+        margin: 5px 0;
+    }
+}
