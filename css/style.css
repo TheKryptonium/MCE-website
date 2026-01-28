@@ -46,7 +46,7 @@ nav>ul {
     gap: 12px;
 }
 
-nav ul .nav-links {
+nav ul .nav-link {
     text-decoration: none;
     color: var(--primary);
     font-weight: 500;
@@ -54,12 +54,11 @@ nav ul .nav-links {
     transition: var(--transition);
 }
 
-.nav-links:hover {
+.nav-link:hover {
     color: var(--text-dark);
-    transform: scaleX(2);
 }
 
-.nav-links.nav-button {
+.nav-link.nav-button {
     background-color: var(--primary);
     color: var(--white);
     padding: 10px;
@@ -362,6 +361,25 @@ img.team {
         display: block;
     }
 
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .active .nav-button{
+        width: 80%;
+        margin: auto auto;
+    }
+
     .hero .accroche {
         font-size: 1.5rem;
         padding: 0 10px;
@@ -432,11 +450,7 @@ img.team {
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
-/**
- * ----------------------------------------
- * animation tracking-in-expand-fwd-bottom
- * ----------------------------------------
- */
+
 @keyframes tracking-in-expand-fwd-bottom {
     0% {
         transform: translateZ(-700px) translateY(100px);

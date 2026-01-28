@@ -17,12 +17,12 @@
 
     <nav class="container">
         <img src="./assets/images/mce_logo.jpeg" alt="Logo MCE" class="logo">
-        <ul class="list-unstyled">
-            <li><a href="#accueil" class="nav-links">Accueil</a></li>
-            <li><a href="#a-propos" class="nav-links">A propos</a></li>
-            <li><a href="#services" class="nav-links">Nos services</a></li>
-            <li><a href="#projets" class="nav-links">Nos projets</a></li>
-            <li><a href="#devis" class="nav-links nav-button">Obtenir un devis</a></li>
+        <ul class="list-unstyled nav-links">
+            <li><a href="#accueil" class="nav-link">Accueil</a></li>
+            <li><a href="#a-propos" class="nav-link">A propos</a></li>
+            <li><a href="#services" class="nav-link">Nos services</a></li>
+            <li><a href="#projets" class="nav-link">Nos projets</a></li>
+            <li><a href="#devis" class="nav-link nav-button">Obtenir un devis</a></li>
         </ul>
         <button class="menu"><i class="fa fa-bars"></i></button>
     </nav>
@@ -196,7 +196,7 @@
                         <li>⁠Maintenance des bâtiments et installations industrielles </li>
                         <li>⁠Diagnostics techniques et audits</li>
                         <li>⁠Remise à niveau des équipements</li>
-                        <li>>⁠Contrats de maintenance et assistance sur site</li>
+                        <li>⁠Contrats de maintenance et assistance sur site</li>
                     </ul>
                 </div>
 
@@ -221,7 +221,7 @@
                         <li>⁠Coordination des intervenants</li>
                         <li>⁠Suivi qualite, couts et delais</li>
                         <li>⁠Gestion des risaues et securite chantier</li>
-                        <li>Controle de conformite regelmentaire</li>
+                        <li>Controle de conformite reglementaire</li>
                         <li>⁠Reception des ouvrages et reporting</li>
                     </ul>
                 </div>
@@ -266,31 +266,31 @@
             </div>
 
             <div class="form-box col-md-6 col-sm-10">
-                <form action="" id="devis">
+                <form action="" id="devis" method="POST">
                     <h3>Demander un devis</h3>
 
                     <div class="mb-3">
                         <label for="mail" class="form-label">Adresse mail</label>
-                        <input type="email" class="form-control" name="mail" placeholder="nom@adresse.com" />
+                        <input type="email" id="email" class="form-control" name="mail" placeholder="nom@adresse.com" />
                     </div>
 
                     <div class="mb-3">
                         <label for="phone" class="form-label">Numero de telephone</label>
-                        <input type="tel" class="form-control" name="phone" placeholder="+237 ..." />
+                        <input type="tel" id="phone" class="form-control" name="phone" placeholder="+237 ..." />
                     </div>
 
                     <div class="mb-3">
                         <label for="location" class="form-label">Localisation du projet</label>
-                        <input type="text" class="form-control" name="location" placeholder="Ville, Region" />
+                        <input type="text" id="location" class="form-control" name="location" placeholder="Ville, Region" />
                     </div>
 
                     <div class="mb-3">
                         <label for="description" class="form-label">Description du projet</label>
-                        <textarea class="form-control" name="description" rows="5"
+                        <textarea class="form-control" id="description" rows="5"
                             placeholder="Decrivez brievement votre projet"></textarea>
                     </div>
 
-                    <button type="submit">Obtenir un devis</button>
+                    <button type="submit" div="devis-submit">Obtenir un devis</button>
 
                 </form>
             </div>
@@ -325,10 +325,12 @@
             <div class="col-md-3 col-sm-10">
                 <h3>Nos services</h3>
                 <ul class="list-unstyled">
-                    <li>Genie civil</li>
-                    <li>Construction</li>
-                    <li>Renovation</li>
-                    <li>Gestion de projets</li>
+                    <li>Construction et Genie civil</li>
+                    <li>Energie et solutions electriques</li>
+                    <li>Ingenierie et etudes techniques</li>
+                    <li>Maintenance technique et support industriel</li>
+                    <li>Numerisation et technologies</li>
+                    <li>Maitrise d'oeuvre et gestion de projets</li>
                 </ul>
             </div>
         </div>
@@ -338,6 +340,7 @@
     </div>
 
     <script src="./js/bootstrap.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
