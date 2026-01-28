@@ -2,6 +2,7 @@
     --primary: #162661;
     --secondary: #1F368B;
     --primary-hover: #0f1b46;
+    --primary-overlay: #0f1b46a2;
     --skyblue: #D0E6FD;
     --text-dark: #1a1a1a;
     --text-light: #f4f4f4;
@@ -89,7 +90,7 @@ nav .menu:hover {
 
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(22, 38, 97, 0.8), rgba(22, 38, 97, 0.6)), url('../assets/images/team_mce.jpeg');
+    background: linear-gradient(rgba(22, 38, 97, 0.8), rgba(22, 38, 97, 0.6)), url('../assets/images/fond.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -196,7 +197,8 @@ img.team {
 
 .values,
 .services,
-.choices {
+.choices,
+.projects {
     justify-content: center;
 }
 
@@ -250,6 +252,58 @@ img.team {
 .choice h4 {
     font-size: 1rem;
     text-align: center;
+}
+
+
+
+.project {
+    position: relative;
+    margin: 15px;
+    padding: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-overlay);
+    color: var(--white);
+    opacity: 0;
+    transition: var(--transition);
+    border-radius: 8px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    padding: 0;
+    z-index: 100;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+.project .description {
+    margin-top: 75%;
+    width: 100%;
+    background-color: var(--primary-hover);
+    text-align: justify;
+    padding: 5px;
+}
+
+.project .description .project-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
 #contact {
@@ -375,7 +429,7 @@ img.team {
         z-index: 10;
     }
 
-    .active .nav-button{
+    .active .nav-button {
         width: 80%;
         margin: auto auto;
     }
@@ -421,6 +475,19 @@ img.team {
         font-size: 0.9rem;
     }
 
+    .projects {
+        padding: 0 20px;
+        justify-content: center;
+    }
+
+    .project .description {
+        margin-top: 65%;
+        width: 100%;
+        background-color: var(--primary-hover);
+        text-align: justify;
+        padding: 5px;
+    }
+
     .contact-content {
         flex-direction: column;
         justify-content: center;
@@ -462,4 +529,3 @@ img.team {
         opacity: 1;
     }
 }
-
