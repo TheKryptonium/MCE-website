@@ -255,10 +255,10 @@ img.team {
 }
 
 
-
 .project {
     position: relative;
     margin: 15px;
+    height: 370px;
     padding: 0;
     border-radius: 8px;
     cursor: pointer;
@@ -266,7 +266,7 @@ img.team {
 
 .project img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 8px;
 }
 
@@ -293,15 +293,14 @@ img.team {
 }
 
 .project .description {
-    margin-top: 75%;
+    margin-top: 250px;
     width: 100%;
+    font-size: 0.8rem;
     background-color: var(--primary-hover);
-    text-align: justify;
-    padding: 5px;
+    padding: 15px 10px;
 }
 
 .project .description .project-title {
-    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 8px;
 }
@@ -317,7 +316,6 @@ img.team {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
 }
 
 #contact h2 {
@@ -479,6 +477,15 @@ img.team {
         padding: 0 20px;
         justify-content: center;
     }
+
+    .project {
+        position: relative;
+        margin: 15px;
+        padding: 0;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
 
     .project .description {
         margin-top: 65%;
