@@ -27,9 +27,9 @@ async function sendEmail(formData) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                service_id: "service_xg7p579",
-                template_id: "template_6iaw5ci",
-                user_id: "WrNa3GQzBNlciac1k",
+                service_id: "service_v05at4m",
+                template_id: "template_rebz5qo",
+                user_id: "CXOmAv_8DV1T1q0nN",
                 template_params: {
                     email: formData.get("email"),
                     description: formData.get("description"),
@@ -58,9 +58,9 @@ async function autoReply(formData) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                service_id: "service_xg7p579",
-                template_id: "template_2pt1ly7",
-                user_id: "WrNa3GQzBNlciac1k",
+                service_id: "service_v05at4m",
+                template_id: "template_fe9742g",
+                user_id: "CXOmAv_8DV1T1q0nN",
                 template_params: {
                     email: formData.get("email"),
                 },
