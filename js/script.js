@@ -1,24 +1,4 @@
-/* RESPONSIVE DESIGN */
-
-const menuButton = document.querySelector('.menu');
-const navLinks = document.querySelector('.nav-links');
-
-menuButton.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    console.log('Menu toggled');
-});
-
-
-/* BACKEND EMAILJS */
-
-/* functions */
-function fillForm(formData, email, description, phone, location) {
-    formData.append("email", email);
-    formData.append("description", description);
-    formData.append("phone", phone);
-    formData.append("location", location);
-}
-
+/*MAIL SERVICES*/
 async function sendEmail(formData) {
     try {
         const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
@@ -49,7 +29,6 @@ async function sendEmail(formData) {
     }
 }
 
-
 async function autoReply(formData) {
     try {
         const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
@@ -78,25 +57,47 @@ async function autoReply(formData) {
 }
 
 
-const form = document.querySelector("#devis");
+/*FORM HANDLER*/
+const fillForm = (formData, email, description, phone, location) => {
+    formData.append("email", email)
+    formData.append("description", description)
+    formData.append("phone", phone)
+    formData.append("location", location)
+}
 
-
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const email = document.querySelector("#email").value;
-    const description = document.querySelector("#description").value;
-    const phone = document.querySelector("#phone").value;
-    const locate = document.querySelector("#location").value;
+const handleFormSubmit = (form) => {
+    const email = document.querySelector("#email").value
+    const description = document.querySelector("#description").value
+    const phone = document.querySelector("#phone").value
+    const locate = document.querySelector("#location").value
 
     const formData = new FormData(form)
 
-    fillForm(formData, email, description, phone, locate);
+    fillForm(formData, email, description, phone, locate)
 
-    console.log(formData.get("email"));
-    console.log(formData.get("description"));
+    console.log(formData.get("email"))
+    console.log(formData.get("description"))
 
-    sendEmail(formData);
-    autoReply(formData);
+    sendEmail(formData)
+    autoReply(formData)
     form.reset()
-});
+
+}
+
+
+/*NAVIGATION & FORM EVENT LISTENERS*/
+const menuButton = document.querySelector('.menu')
+const navLinks = document.querySelector('.nav-links')
+const form = document.querySelector("#devis")
+
+
+menuButton.addEventListener('click', () => {
+    navLinks.classList.toggle('active')
+    console.log('Menu toggled')
+})
+
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    handleFormSubmit(form)
+})
